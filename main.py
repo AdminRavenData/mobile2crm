@@ -254,7 +254,7 @@ def connect_to_bigquery():
         
         # Get other configuration
         project_id = credentials_info["project_id"]
-        gemini_api_key = st.secrets["authentication"]["gemini"]
+        gemini_api_key = st.secrets["authentication"]["gemini_api_key"]
         
         # Get dataset_id - first try from secrets, then fallback to a default
         dataset_id = st.secrets.get("dataset_id", "")
@@ -327,7 +327,7 @@ def show_application():
         success, message = connect_to_bigquery()
         if success:
             st.success(message)
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error(message)
             st.warning("Please check if the secrets file contains all required information.")
