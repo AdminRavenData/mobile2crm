@@ -1,6 +1,6 @@
-streamlit==1.34.0
-pandas==2.1.3
-google-cloud-bigquery==3.20.0
-google-generativeai==0.3.1
-plotly==5.18.0
-hashlib==20081110
+streamlit
+pandas
+google-cloud-bigquery
+google-generativeai
+plotly
+hashlib
